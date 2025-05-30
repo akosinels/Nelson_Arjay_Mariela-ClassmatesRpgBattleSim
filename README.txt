@@ -19,6 +19,12 @@ Character Types
      * 30% chance to miss completely
      * 15% chance for "perfect answer" that deals triple damage
 
+3. Debugger
+   - A character inspired by students who excel at debugging and analysis
+   - Has a chance to reflect damage back at the attacker
+   - Higher health pool for sustainability
+   - Special ability: 25% chance to analyze and reflect (2x damage + 5 bonus)
+
 OOP Principles Implementation
 ---------------------------
 1. Encapsulation
@@ -28,7 +34,7 @@ OOP Principles Implementation
 
 2. Inheritance
    - ClassFighter as the abstract base class
-   - CodeCrusher and QuizMaster inherit from ClassFighter
+   - CodeCrusher, QuizMaster, and Debugger inherit from ClassFighter
    - Common functionality shared through inheritance
 
 3. Polymorphism
@@ -60,5 +66,21 @@ How to Run
 3. Run the application
 4. Enter player names and select character types
 5. Click "Start Battle" to begin
+
+Images Folder
+-------------
+- The `Images` folder contains PNG images for each character type (e.g., `codecrusher.png`, `quizmaster.png`, `debugger.png`).
+- You can customize the appearance of each character by replacing these images or adding new ones for additional character types.
+- If an image is missing, a colored placeholder will be shown.
+- **Important:** When pushing to GitHub, make sure to include the `Images` folder and its contents so that character images appear correctly for all users.
+
+Customizing Character Images
+---------------------------
+- To use your own images, place PNG files in the `Images` folder with the following naming convention:
+  - `codecrusher.png`
+  - `quizmaster.png`
+  - `debugger.png`
+- Recommended size: 200x200 pixels (or larger, will be scaled to fit)
+- Images will be displayed in both the character selection screen and during battles.
 
 Note: This project is for educational purposes and demonstrates the implementation of OOP principles in a fun and engaging way. 
