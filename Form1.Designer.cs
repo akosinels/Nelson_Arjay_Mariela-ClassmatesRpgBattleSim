@@ -120,7 +120,7 @@
             // 
             lblTimer.AutoSize = true;
             lblTimer.Font = new Font("Comic Sans MS", 10F, FontStyle.Bold);
-            lblTimer.Location = new Point(653, 31);
+            lblTimer.Location = new Point(674, 31);
             lblTimer.Margin = new Padding(4, 0, 4, 0);
             lblTimer.Name = "lblTimer";
             lblTimer.Size = new Size(55, 19);
@@ -275,9 +275,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(240, 240, 240);
             BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Images", "bg.jpg"));
             BackgroundImageLayout = ImageLayout.Stretch;
-            BackColor = Color.FromArgb(240, 240, 240);
             ClientSize = new Size(933, 692);
             Controls.Add(grpPlayer2);
             Controls.Add(grpPlayer1);
