@@ -37,8 +37,9 @@ namespace ClassmatesRpgBattleSim
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            // Theming: Form background
-            this.BackColor = Color.FromArgb(200, 255, 200); // Light green
+            this.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Images", "bg.jpg"));
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.BackColor = Color.FromArgb(240, 240, 240); // Light gray background
         }
 
         private void InitializeCharacterSelection()

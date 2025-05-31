@@ -76,7 +76,7 @@
             txtBattleLog.Name = "txtBattleLog";
             txtBattleLog.ReadOnly = true;
             txtBattleLog.ScrollBars = ScrollBars.Vertical;
-            txtBattleLog.Size = new Size(863, 461);
+            txtBattleLog.Size = new Size(884, 461);
             txtBattleLog.TabIndex = 1;
             // 
             // lblTurnInfo
@@ -208,7 +208,7 @@
             grpPlayer2.Controls.Add(lblPlayer2HealthStat);
             grpPlayer2.Controls.Add(lblPlayer2Attack);
             grpPlayer2.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold);
-            grpPlayer2.Location = new Point(653, 69);
+            grpPlayer2.Location = new Point(674, 69);
             grpPlayer2.Margin = new Padding(4, 3, 4, 3);
             grpPlayer2.Name = "grpPlayer2";
             grpPlayer2.Padding = new Padding(4, 3, 4, 3);
@@ -275,7 +275,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(200, 255, 200);
+            BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Images", "bg.jpg"));
+            BackgroundImageLayout = ImageLayout.Stretch;
+            BackColor = Color.FromArgb(240, 240, 240);
             ClientSize = new Size(933, 692);
             Controls.Add(grpPlayer2);
             Controls.Add(grpPlayer1);
