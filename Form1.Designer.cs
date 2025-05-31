@@ -28,255 +28,272 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnStartBattle = new System.Windows.Forms.Button();
-            this.txtBattleLog = new System.Windows.Forms.TextBox();
-            this.lblTurnInfo = new System.Windows.Forms.Label();
-            this.btnResetBattle = new System.Windows.Forms.Button();
-            this.btnSurrender = new System.Windows.Forms.Button();
-            this.lblTimer = new System.Windows.Forms.Label();
-            this.grpPlayer1 = new System.Windows.Forms.GroupBox();
-            this.grpPlayer2 = new System.Windows.Forms.GroupBox();
-            this.lblPlayer1Name = new System.Windows.Forms.Label();
-            this.lblPlayer1Type = new System.Windows.Forms.Label();
-            this.lblPlayer1HealthStat = new System.Windows.Forms.Label();
-            this.lblPlayer1Attack = new System.Windows.Forms.Label();
-            this.picPlayer1 = new System.Windows.Forms.PictureBox();
-            this.lblPlayer2Name = new System.Windows.Forms.Label();
-            this.lblPlayer2Type = new System.Windows.Forms.Label();
-            this.lblPlayer2HealthStat = new System.Windows.Forms.Label();
-            this.lblPlayer2Attack = new System.Windows.Forms.Label();
-            this.picPlayer2 = new System.Windows.Forms.PictureBox();
-            this.SuspendLayout();
+            btnStartBattle = new Button();
+            txtBattleLog = new TextBox();
+            lblTurnInfo = new Label();
+            btnResetBattle = new Button();
+            btnSurrender = new Button();
+            lblTimer = new Label();
+            grpPlayer1 = new GroupBox();
+            picPlayer1 = new PictureBox();
+            lblPlayer1Name = new Label();
+            lblPlayer1Type = new Label();
+            lblPlayer1HealthStat = new Label();
+            lblPlayer1Attack = new Label();
+            grpPlayer2 = new GroupBox();
+            picPlayer2 = new PictureBox();
+            lblPlayer2Name = new Label();
+            lblPlayer2Type = new Label();
+            lblPlayer2HealthStat = new Label();
+            lblPlayer2Attack = new Label();
+            grpPlayer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picPlayer1).BeginInit();
+            grpPlayer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picPlayer2).BeginInit();
+            SuspendLayout();
             // 
             // btnStartBattle
             // 
-            this.btnStartBattle.Location = new System.Drawing.Point(20, 20);
-            this.btnStartBattle.Name = "btnStartBattle";
-            this.btnStartBattle.Size = new System.Drawing.Size(100, 23);
-            this.btnStartBattle.TabIndex = 0;
-            this.btnStartBattle.Text = "Start Battle";
-            this.btnStartBattle.UseVisualStyleBackColor = true;
-            this.btnStartBattle.Click += new System.EventHandler(this.BtnStartBattle_Click);
+            btnStartBattle.BackColor = Color.Gold;
+            btnStartBattle.ForeColor = Color.Black;
+            btnStartBattle.Location = new Point(399, 109);
+            btnStartBattle.Margin = new Padding(4, 3, 4, 3);
+            btnStartBattle.Name = "btnStartBattle";
+            btnStartBattle.Size = new Size(117, 27);
+            btnStartBattle.TabIndex = 0;
+            btnStartBattle.Text = "Start Battle";
+            btnStartBattle.UseVisualStyleBackColor = false;
+            btnStartBattle.Click += BtnStartBattle_Click;
             // 
             // txtBattleLog
             // 
-            this.txtBattleLog.Location = new System.Drawing.Point(20, 170);
-            this.txtBattleLog.Multiline = true;
-            this.txtBattleLog.Name = "txtBattleLog";
-            this.txtBattleLog.ReadOnly = true;
-            this.txtBattleLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtBattleLog.Size = new System.Drawing.Size(740, 400);
-            this.txtBattleLog.TabIndex = 1;
+            txtBattleLog.BackColor = Color.FromArgb(44, 62, 80);
+            txtBattleLog.Font = new Font("Comic Sans MS", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBattleLog.ForeColor = Color.White;
+            txtBattleLog.Location = new Point(23, 196);
+            txtBattleLog.Margin = new Padding(4, 3, 4, 3);
+            txtBattleLog.Multiline = true;
+            txtBattleLog.Name = "txtBattleLog";
+            txtBattleLog.ReadOnly = true;
+            txtBattleLog.ScrollBars = ScrollBars.Vertical;
+            txtBattleLog.Size = new Size(863, 461);
+            txtBattleLog.TabIndex = 1;
             // 
             // lblTurnInfo
             // 
-            this.lblTurnInfo.AutoSize = true;
-            this.lblTurnInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnInfo.Location = new System.Drawing.Point(140, 23);
-            this.lblTurnInfo.Name = "lblTurnInfo";
-            this.lblTurnInfo.Size = new System.Drawing.Size(100, 16);
-            this.lblTurnInfo.TabIndex = 2;
-            this.lblTurnInfo.Text = "Battle Status";
+            lblTurnInfo.AutoSize = true;
+            lblTurnInfo.Font = new Font("Comic Sans MS", 11F, FontStyle.Bold);
+            lblTurnInfo.Location = new Point(23, 31);
+            lblTurnInfo.Margin = new Padding(4, 0, 4, 0);
+            lblTurnInfo.Name = "lblTurnInfo";
+            lblTurnInfo.Size = new Size(107, 21);
+            lblTurnInfo.TabIndex = 2;
+            lblTurnInfo.Text = "Battle Status";
             // 
             // btnResetBattle
             // 
-            this.btnResetBattle.Enabled = false;
-            this.btnResetBattle.Location = new System.Drawing.Point(260, 20);
-            this.btnResetBattle.Name = "btnResetBattle";
-            this.btnResetBattle.Size = new System.Drawing.Size(100, 23);
-            this.btnResetBattle.TabIndex = 3;
-            this.btnResetBattle.Text = "Reset Battle";
-            this.btnResetBattle.UseVisualStyleBackColor = true;
-            this.btnResetBattle.Click += new System.EventHandler(this.BtnResetBattle_Click);
+            btnResetBattle.BackColor = Color.LightSkyBlue;
+            btnResetBattle.Enabled = false;
+            btnResetBattle.ForeColor = Color.Black;
+            btnResetBattle.Location = new Point(260, 20);
+            btnResetBattle.Name = "btnResetBattle";
+            btnResetBattle.Size = new Size(100, 23);
+            btnResetBattle.TabIndex = 3;
+            btnResetBattle.Text = "Reset Battle";
+            btnResetBattle.UseVisualStyleBackColor = false;
+            btnResetBattle.Click += BtnResetBattle_Click;
             // 
             // btnSurrender
             // 
-            this.btnSurrender.Enabled = false;
-            this.btnSurrender.Location = new System.Drawing.Point(380, 20);
-            this.btnSurrender.Name = "btnSurrender";
-            this.btnSurrender.Size = new System.Drawing.Size(100, 23);
-            this.btnSurrender.TabIndex = 4;
-            this.btnSurrender.Text = "Surrender";
-            this.btnSurrender.UseVisualStyleBackColor = true;
-            this.btnSurrender.Click += new System.EventHandler(this.BtnSurrender_Click);
+            btnSurrender.BackColor = Color.IndianRed;
+            btnSurrender.Enabled = false;
+            btnSurrender.ForeColor = Color.White;
+            btnSurrender.Location = new Point(380, 20);
+            btnSurrender.Name = "btnSurrender";
+            btnSurrender.Size = new Size(100, 23);
+            btnSurrender.TabIndex = 4;
+            btnSurrender.Text = "Surrender";
+            btnSurrender.UseVisualStyleBackColor = false;
+            btnSurrender.Click += BtnSurrender_Click;
             // 
             // lblTimer
             // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.Location = new System.Drawing.Point(500, 23);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(49, 16);
-            this.lblTimer.TabIndex = 7;
-            this.lblTimer.Text = "Timer:";
+            lblTimer.AutoSize = true;
+            lblTimer.Font = new Font("Comic Sans MS", 10F, FontStyle.Bold);
+            lblTimer.Location = new Point(653, 31);
+            lblTimer.Margin = new Padding(4, 0, 4, 0);
+            lblTimer.Name = "lblTimer";
+            lblTimer.Size = new Size(55, 19);
+            lblTimer.TabIndex = 7;
+            lblTimer.Text = "Timer:";
             // 
             // grpPlayer1
             // 
-            this.grpPlayer1.Controls.Add(this.picPlayer1);
-            this.grpPlayer1.Controls.Add(this.lblPlayer1Name);
-            this.grpPlayer1.Controls.Add(this.lblPlayer1Type);
-            this.grpPlayer1.Controls.Add(this.lblPlayer1HealthStat);
-            this.grpPlayer1.Controls.Add(this.lblPlayer1Attack);
-            this.grpPlayer1.Location = new System.Drawing.Point(20, 60);
-            this.grpPlayer1.Name = "grpPlayer1";
-            this.grpPlayer1.Size = new System.Drawing.Size(200, 90);
-            this.grpPlayer1.TabIndex = 8;
-            this.grpPlayer1.TabStop = false;
-            this.grpPlayer1.Text = "Player 1";
+            grpPlayer1.BackColor = Color.FromArgb(245, 245, 220);
+            grpPlayer1.Controls.Add(picPlayer1);
+            grpPlayer1.Controls.Add(lblPlayer1Name);
+            grpPlayer1.Controls.Add(lblPlayer1Type);
+            grpPlayer1.Controls.Add(lblPlayer1HealthStat);
+            grpPlayer1.Controls.Add(lblPlayer1Attack);
+            grpPlayer1.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold);
+            grpPlayer1.Location = new Point(23, 69);
+            grpPlayer1.Margin = new Padding(4, 3, 4, 3);
+            grpPlayer1.Name = "grpPlayer1";
+            grpPlayer1.Padding = new Padding(4, 3, 4, 3);
+            grpPlayer1.Size = new Size(233, 104);
+            grpPlayer1.TabIndex = 8;
+            grpPlayer1.TabStop = false;
+            grpPlayer1.Text = "Player 1";
             // 
             // picPlayer1
             // 
-            this.picPlayer1.Location = new System.Drawing.Point(6, 19);
-            this.picPlayer1.Name = "picPlayer1";
-            this.picPlayer1.Size = new System.Drawing.Size(64, 64);
-            this.picPlayer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPlayer1.TabIndex = 0;
-            this.picPlayer1.TabStop = false;
+            picPlayer1.Location = new Point(7, 22);
+            picPlayer1.Margin = new Padding(4, 3, 4, 3);
+            picPlayer1.Name = "picPlayer1";
+            picPlayer1.Size = new Size(75, 74);
+            picPlayer1.SizeMode = PictureBoxSizeMode.Zoom;
+            picPlayer1.TabIndex = 0;
+            picPlayer1.TabStop = false;
             // 
             // lblPlayer1Name
             // 
-            this.lblPlayer1Name.AutoSize = true;
-            this.lblPlayer1Name.Location = new System.Drawing.Point(76, 19);
-            this.lblPlayer1Name.Name = "lblPlayer1Name";
-            this.lblPlayer1Name.Size = new System.Drawing.Size(38, 13);
-            this.lblPlayer1Name.TabIndex = 1;
-            this.lblPlayer1Name.Text = "Name:";
+            lblPlayer1Name.AutoSize = true;
+            lblPlayer1Name.Font = new Font("Comic Sans MS", 9F);
+            lblPlayer1Name.Location = new Point(89, 22);
+            lblPlayer1Name.Margin = new Padding(4, 0, 4, 0);
+            lblPlayer1Name.Name = "lblPlayer1Name";
+            lblPlayer1Name.Size = new Size(42, 17);
+            lblPlayer1Name.TabIndex = 1;
+            lblPlayer1Name.Text = "Name:";
             // 
             // lblPlayer1Type
             // 
-            this.lblPlayer1Type.AutoSize = true;
-            this.lblPlayer1Type.Location = new System.Drawing.Point(76, 35);
-            this.lblPlayer1Type.Name = "lblPlayer1Type";
-            this.lblPlayer1Type.Size = new System.Drawing.Size(34, 13);
-            this.lblPlayer1Type.TabIndex = 2;
-            this.lblPlayer1Type.Text = "Type:";
+            lblPlayer1Type.AutoSize = true;
+            lblPlayer1Type.Font = new Font("Comic Sans MS", 9F);
+            lblPlayer1Type.Location = new Point(89, 40);
+            lblPlayer1Type.Margin = new Padding(4, 0, 4, 0);
+            lblPlayer1Type.Name = "lblPlayer1Type";
+            lblPlayer1Type.Size = new Size(38, 17);
+            lblPlayer1Type.TabIndex = 2;
+            lblPlayer1Type.Text = "Type:";
             // 
             // lblPlayer1HealthStat
             // 
-            this.lblPlayer1HealthStat.AutoSize = true;
-            this.lblPlayer1HealthStat.Location = new System.Drawing.Point(76, 51);
-            this.lblPlayer1HealthStat.Name = "lblPlayer1HealthStat";
-            this.lblPlayer1HealthStat.Size = new System.Drawing.Size(41, 13);
-            this.lblPlayer1HealthStat.TabIndex = 3;
-            this.lblPlayer1HealthStat.Text = "Health:";
+            lblPlayer1HealthStat.AutoSize = true;
+            lblPlayer1HealthStat.Font = new Font("Comic Sans MS", 9F);
+            lblPlayer1HealthStat.Location = new Point(89, 59);
+            lblPlayer1HealthStat.Margin = new Padding(4, 0, 4, 0);
+            lblPlayer1HealthStat.Name = "lblPlayer1HealthStat";
+            lblPlayer1HealthStat.Size = new Size(49, 17);
+            lblPlayer1HealthStat.TabIndex = 3;
+            lblPlayer1HealthStat.Text = "Health:";
             // 
             // lblPlayer1Attack
             // 
-            this.lblPlayer1Attack.AutoSize = true;
-            this.lblPlayer1Attack.Location = new System.Drawing.Point(76, 67);
-            this.lblPlayer1Attack.Name = "lblPlayer1Attack";
-            this.lblPlayer1Attack.Size = new System.Drawing.Size(41, 13);
-            this.lblPlayer1Attack.TabIndex = 4;
-            this.lblPlayer1Attack.Text = "Attack:";
+            lblPlayer1Attack.AutoSize = true;
+            lblPlayer1Attack.Font = new Font("Comic Sans MS", 9F);
+            lblPlayer1Attack.Location = new Point(89, 77);
+            lblPlayer1Attack.Margin = new Padding(4, 0, 4, 0);
+            lblPlayer1Attack.Name = "lblPlayer1Attack";
+            lblPlayer1Attack.Size = new Size(50, 17);
+            lblPlayer1Attack.TabIndex = 4;
+            lblPlayer1Attack.Text = "Attack:";
             // 
             // grpPlayer2
             // 
-            this.grpPlayer2.Controls.Add(this.picPlayer2);
-            this.grpPlayer2.Controls.Add(this.lblPlayer2Name);
-            this.grpPlayer2.Controls.Add(this.lblPlayer2Type);
-            this.grpPlayer2.Controls.Add(this.lblPlayer2HealthStat);
-            this.grpPlayer2.Controls.Add(this.lblPlayer2Attack);
-            this.grpPlayer2.Location = new System.Drawing.Point(560, 60);
-            this.grpPlayer2.Name = "grpPlayer2";
-            this.grpPlayer2.Size = new System.Drawing.Size(200, 90);
-            this.grpPlayer2.TabIndex = 9;
-            this.grpPlayer2.TabStop = false;
-            this.grpPlayer2.Text = "Player 2";
+            grpPlayer2.BackColor = Color.FromArgb(245, 245, 220);
+            grpPlayer2.Controls.Add(picPlayer2);
+            grpPlayer2.Controls.Add(lblPlayer2Name);
+            grpPlayer2.Controls.Add(lblPlayer2Type);
+            grpPlayer2.Controls.Add(lblPlayer2HealthStat);
+            grpPlayer2.Controls.Add(lblPlayer2Attack);
+            grpPlayer2.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold);
+            grpPlayer2.Location = new Point(653, 69);
+            grpPlayer2.Margin = new Padding(4, 3, 4, 3);
+            grpPlayer2.Name = "grpPlayer2";
+            grpPlayer2.Padding = new Padding(4, 3, 4, 3);
+            grpPlayer2.Size = new Size(233, 104);
+            grpPlayer2.TabIndex = 9;
+            grpPlayer2.TabStop = false;
+            grpPlayer2.Text = "Player 2";
             // 
             // picPlayer2
             // 
-            this.picPlayer2.Location = new System.Drawing.Point(6, 19);
-            this.picPlayer2.Name = "picPlayer2";
-            this.picPlayer2.Size = new System.Drawing.Size(64, 64);
-            this.picPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPlayer2.TabIndex = 0;
-            this.picPlayer2.TabStop = false;
+            picPlayer2.Location = new Point(7, 22);
+            picPlayer2.Margin = new Padding(4, 3, 4, 3);
+            picPlayer2.Name = "picPlayer2";
+            picPlayer2.Size = new Size(75, 74);
+            picPlayer2.SizeMode = PictureBoxSizeMode.Zoom;
+            picPlayer2.TabIndex = 0;
+            picPlayer2.TabStop = false;
             // 
             // lblPlayer2Name
             // 
-            this.lblPlayer2Name.AutoSize = true;
-            this.lblPlayer2Name.Location = new System.Drawing.Point(76, 19);
-            this.lblPlayer2Name.Name = "lblPlayer2Name";
-            this.lblPlayer2Name.Size = new System.Drawing.Size(38, 13);
-            this.lblPlayer2Name.TabIndex = 1;
-            this.lblPlayer2Name.Text = "Name:";
+            lblPlayer2Name.AutoSize = true;
+            lblPlayer2Name.Font = new Font("Comic Sans MS", 9F);
+            lblPlayer2Name.Location = new Point(89, 22);
+            lblPlayer2Name.Margin = new Padding(4, 0, 4, 0);
+            lblPlayer2Name.Name = "lblPlayer2Name";
+            lblPlayer2Name.Size = new Size(42, 17);
+            lblPlayer2Name.TabIndex = 1;
+            lblPlayer2Name.Text = "Name:";
             // 
             // lblPlayer2Type
             // 
-            this.lblPlayer2Type.AutoSize = true;
-            this.lblPlayer2Type.Location = new System.Drawing.Point(76, 35);
-            this.lblPlayer2Type.Name = "lblPlayer2Type";
-            this.lblPlayer2Type.Size = new System.Drawing.Size(34, 13);
-            this.lblPlayer2Type.TabIndex = 2;
-            this.lblPlayer2Type.Text = "Type:";
+            lblPlayer2Type.AutoSize = true;
+            lblPlayer2Type.Font = new Font("Comic Sans MS", 9F);
+            lblPlayer2Type.Location = new Point(89, 40);
+            lblPlayer2Type.Margin = new Padding(4, 0, 4, 0);
+            lblPlayer2Type.Name = "lblPlayer2Type";
+            lblPlayer2Type.Size = new Size(38, 17);
+            lblPlayer2Type.TabIndex = 2;
+            lblPlayer2Type.Text = "Type:";
             // 
             // lblPlayer2HealthStat
             // 
-            this.lblPlayer2HealthStat.AutoSize = true;
-            this.lblPlayer2HealthStat.Location = new System.Drawing.Point(76, 51);
-            this.lblPlayer2HealthStat.Name = "lblPlayer2HealthStat";
-            this.lblPlayer2HealthStat.Size = new System.Drawing.Size(41, 13);
-            this.lblPlayer2HealthStat.TabIndex = 3;
-            this.lblPlayer2HealthStat.Text = "Health:";
+            lblPlayer2HealthStat.AutoSize = true;
+            lblPlayer2HealthStat.Font = new Font("Comic Sans MS", 9F);
+            lblPlayer2HealthStat.Location = new Point(89, 59);
+            lblPlayer2HealthStat.Margin = new Padding(4, 0, 4, 0);
+            lblPlayer2HealthStat.Name = "lblPlayer2HealthStat";
+            lblPlayer2HealthStat.Size = new Size(49, 17);
+            lblPlayer2HealthStat.TabIndex = 3;
+            lblPlayer2HealthStat.Text = "Health:";
             // 
             // lblPlayer2Attack
             // 
-            this.lblPlayer2Attack.AutoSize = true;
-            this.lblPlayer2Attack.Location = new System.Drawing.Point(76, 67);
-            this.lblPlayer2Attack.Name = "lblPlayer2Attack";
-            this.lblPlayer2Attack.Size = new System.Drawing.Size(41, 13);
-            this.lblPlayer2Attack.TabIndex = 4;
-            this.lblPlayer2Attack.Text = "Attack:";
+            lblPlayer2Attack.AutoSize = true;
+            lblPlayer2Attack.Font = new Font("Comic Sans MS", 9F);
+            lblPlayer2Attack.Location = new Point(89, 77);
+            lblPlayer2Attack.Margin = new Padding(4, 0, 4, 0);
+            lblPlayer2Attack.Name = "lblPlayer2Attack";
+            lblPlayer2Attack.Size = new Size(50, 17);
+            lblPlayer2Attack.TabIndex = 4;
+            lblPlayer2Attack.Text = "Attack:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 600);
-            this.Controls.Add(this.grpPlayer2);
-            this.Controls.Add(this.grpPlayer1);
-            this.Controls.Add(this.lblTimer);
-            this.Controls.Add(this.lblTurnInfo);
-            this.Controls.Add(this.txtBattleLog);
-            this.Controls.Add(this.btnStartBattle);
-            this.Name = "Form1";
-            this.Text = "Classmates RPG Battle Simulator";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
-            // Theming: Form background
-            this.BackColor = System.Drawing.Color.FromArgb(200, 255, 200); // Light green
-
-            // Theming: Battle log (chalkboard look)
-            this.txtBattleLog.BackColor = System.Drawing.Color.FromArgb(44, 62, 80);
-            this.txtBattleLog.ForeColor = System.Drawing.Color.White;
-            this.txtBattleLog.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-            // Theming: Group boxes (notebook paper look)
-            this.grpPlayer1.BackColor = System.Drawing.Color.FromArgb(245, 245, 220); // Light beige
-            this.grpPlayer2.BackColor = System.Drawing.Color.FromArgb(245, 245, 220);
-            this.grpPlayer1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.grpPlayer2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold);
-
-            // Theming: Labels (handwriting style)
-            this.lblPlayer1Name.Font = new System.Drawing.Font("Comic Sans MS", 9F);
-            this.lblPlayer1Type.Font = new System.Drawing.Font("Comic Sans MS", 9F);
-            this.lblPlayer1HealthStat.Font = new System.Drawing.Font("Comic Sans MS", 9F);
-            this.lblPlayer1Attack.Font = new System.Drawing.Font("Comic Sans MS", 9F);
-            this.lblPlayer2Name.Font = new System.Drawing.Font("Comic Sans MS", 9F);
-            this.lblPlayer2Type.Font = new System.Drawing.Font("Comic Sans MS", 9F);
-            this.lblPlayer2HealthStat.Font = new System.Drawing.Font("Comic Sans MS", 9F);
-            this.lblPlayer2Attack.Font = new System.Drawing.Font("Comic Sans MS", 9F);
-            this.lblTurnInfo.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold);
-            this.lblTimer.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-
-            // Theming: Buttons
-            this.btnStartBattle.BackColor = System.Drawing.Color.Gold;
-            this.btnStartBattle.ForeColor = System.Drawing.Color.Black;
-            this.btnResetBattle.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnResetBattle.ForeColor = System.Drawing.Color.Black;
-            this.btnSurrender.BackColor = System.Drawing.Color.IndianRed;
-            this.btnSurrender.ForeColor = System.Drawing.Color.White;
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(200, 255, 200);
+            ClientSize = new Size(933, 692);
+            Controls.Add(grpPlayer2);
+            Controls.Add(grpPlayer1);
+            Controls.Add(lblTimer);
+            Controls.Add(lblTurnInfo);
+            Controls.Add(txtBattleLog);
+            Controls.Add(btnStartBattle);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "Form1";
+            Text = "Classmates RPG Battle Simulator";
+            grpPlayer1.ResumeLayout(false);
+            grpPlayer1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picPlayer1).EndInit();
+            grpPlayer2.ResumeLayout(false);
+            grpPlayer2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picPlayer2).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

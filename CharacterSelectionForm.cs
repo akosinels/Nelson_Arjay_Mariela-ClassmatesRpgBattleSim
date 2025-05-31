@@ -8,19 +8,17 @@ namespace ClassmatesRpgBattleSim
 {
     public partial class CharacterSelectionForm : Form
     {
-        private PictureBox characterImage;
-        private Label characterName;
-        private TextBox characterStatsBox;
-        private TextBox characterDescriptionBox;
-        private ComboBox characterType;
-        private Button selectButton;
-        private Button cancelButton;
-        private TextBox nameInput;
-        private PictureBox[] characterPortraits;
-        private Panel detailsPanel;
+        private PictureBox characterImage = null!;
+        private TextBox characterStatsBox = null!;
+        private TextBox characterDescriptionBox = null!;
+        private Button selectButton = null!;
+        private Button cancelButton = null!;
+        private TextBox nameInput = null!;
+        private PictureBox[] characterPortraits = null!;
+        private Panel detailsPanel = null!;
         private int selectedCharacterIndex = 0;
         private readonly string[] characterTypes = { "CodeCrusher", "QuizMaster", "Debugger" };
-        private Label classLabel;
+        private Label classLabel = null!;
 
         public string SelectedName { get; private set; } = string.Empty;
         public string SelectedType { get; private set; } = string.Empty;
@@ -199,7 +197,7 @@ namespace ClassmatesRpgBattleSim
             SelectCharacter(0);
         }
 
-        private void Portrait_Click(object sender, EventArgs e)
+        private void Portrait_Click(object? sender, EventArgs e)
         {
             if (sender is PictureBox pb && pb.Tag is int idx)
             {
@@ -229,7 +227,7 @@ namespace ClassmatesRpgBattleSim
 
         private void CharacterType_SelectedIndexChanged(object sender, EventArgs e) { /* no longer used */ }
 
-        private void NameInput_TextChanged(object sender, EventArgs e)
+        private void NameInput_TextChanged(object? sender, EventArgs e)
         {
             UpdateSelectButtonState();
         }
@@ -359,18 +357,18 @@ namespace ClassmatesRpgBattleSim
             };
         }
 
-        private void SelectButton_Click(object sender, EventArgs e)
+        private void SelectButton_Click(object? sender, EventArgs e)
         {
-            if (characterType.SelectedItem != null && !string.IsNullOrWhiteSpace(nameInput.Text))
+            if (!string.IsNullOrWhiteSpace(nameInput.Text))
             {
-                SelectedType = characterType.SelectedItem.ToString();
+                SelectedType = characterTypes[selectedCharacterIndex];
                 SelectedName = nameInput.Text;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object? sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();

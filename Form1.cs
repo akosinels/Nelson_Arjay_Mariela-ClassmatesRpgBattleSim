@@ -11,7 +11,7 @@ namespace ClassmatesRpgBattleSim
         private bool battleInProgress = false;
         private int currentTurn = 0;
         private bool isPlayer1Turn = true;
-        private System.Windows.Forms.Timer battleTimer;
+        private System.Windows.Forms.Timer battleTimer = null!;
         private const int TURN_DELAY = 2500; // 2.5 seconds delay between turns
         private int remainingTime = 0;
 
@@ -28,7 +28,7 @@ namespace ClassmatesRpgBattleSim
             battleTimer.Tick += BattleTimer_Tick;
         }
 
-        private void BattleTimer_Tick(object sender, EventArgs e)
+        private void BattleTimer_Tick(object? sender, EventArgs e)
         {
             if (!battleInProgress || player1 == null || player2 == null) return;
 
